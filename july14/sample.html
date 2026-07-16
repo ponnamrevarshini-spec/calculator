@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Calculator</h1>
+
+        <label>Enter A number:</label>
+        <input type="number" id="num1">
+        <br><br>
+
+        <label>Enter B number:</label>
+        <input type="number" id="num2">
+        <br><br>
+
+        <button onclick="calci(1)">Add</button>
+        <button onclick="calci(2)">Subtract</button>
+        <button onclick="calci(3)">Multiply</button>
+        <button onclick="calci(4)">Divide</button>
+        <button onclick="calci(5)">Modulus</button>
+        <button onclick="calci(6)">Power</button>
+
+        <br><br>
+        <label>Answer:</label>
+        <input type="number" id="ans">
+
+
+        <script>
+
+            function calci(op) {
+
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let result;
+
+                switch (op) {
+                    case 1:
+                        result = a + b;
+                        break;
+                    case 2:
+                        result = a - b;
+                        break;
+                    case 3:
+                        result = a * b;
+                        break;
+                    case 4:
+                        result = a / b;
+                        break;
+                    case 5:
+                        result = a % b;
+                        break;
+                    case 6:
+                        result = a ** b;
+                        break;
+                }
+
+                document.getElementById("ans").value = result;
+
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

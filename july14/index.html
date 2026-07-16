@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button id="sub" onclick="mul()">multiply</button>
+    <p id="ans"></p>
+    <script>
+        function mul() {
+            let a = document.getElementById('num1').value;
+            let b = document.getElementById('num2').value;
+            let ans = document.getElementById('ans');
+            ans.innerText = a * b;
+            //console.log(a);
+            //console.log(b);
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+        }
+    </script>
+</body>
+
+</html>
